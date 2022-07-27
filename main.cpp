@@ -6,16 +6,20 @@ using namespace std;
 #define M (int)1e5
 long long a[N],x,res[N],base[N],tmp[N];
 int main(){
-    //freopen("mi.in","r",stdin);
-    //freopen("mi.out","w",stdout);
+
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
     res[0]=1;
     base[0]=1;
     int resl=1;
     int basel=1;
     int tmpl=1;
     int al=1;
+
     cin>>base[0];
     cin>>x;
+
     while(x){
         if(x&1){
             //res*=base;
@@ -81,9 +85,11 @@ int main(){
         }
         x>>=1;
     }
+
     printf("%lld",res[resl-1]);
     for(int i=resl-2;i>=0;i--){
         printf("%04lld",res[i]);
     }
+    
     return 0;
 }
